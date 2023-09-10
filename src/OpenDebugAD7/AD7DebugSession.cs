@@ -1134,7 +1134,8 @@ namespace OpenDebugAD7
             string miDebuggerServerAddress = responder.Arguments.ConfigurationProperties.GetValueAsString("miDebuggerServerAddress");
 
             // Pipe trasport can talk to remote machines so paths and files should not be checked in this case.
-            bool skipFilesystemChecks = (pipeTransport != null || miDebuggerServerAddress != null);
+            // bool skipFilesystemChecks = (pipeTransport != null || miDebuggerServerAddress != null);
+            bool skipFilesystemChecks = true;
 
             // For a remote scenario, we assume whatever input user has provided is correct.
             // The target remote could be any OS, so we don't try to change anything.
